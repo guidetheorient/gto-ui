@@ -29,7 +29,10 @@ export default {
   padding-top: 30px;
   border-right: 1px solid #eee;
   .comp-link{
+    display: block;
     padding: 5px 15px;
+    border-left: 4px solid transparent;
+    margin: 4px 0;
     &.router-link-active{
       border-left: 4px solid #646cff;
       color: #646cff;

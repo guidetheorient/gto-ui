@@ -1,7 +1,9 @@
 import GButton from "./GButton";
+import GLayout from "./GLayout";
 
 const comps = [
-  GButton
+  GButton,
+  GLayout
 ]
 
 export default {

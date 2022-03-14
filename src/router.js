@@ -14,6 +14,13 @@ export default createRouter({
           meta: {
             name: '按钮'
           }
+        },
+        {
+          path: 'GLayout',
+          component: () => import('./views/GLayout/index.vue'),
+          meta: {
+            name: '布局'
+          }
         }
       ]
     }
