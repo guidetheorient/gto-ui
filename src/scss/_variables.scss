@@ -3,6 +3,13 @@ $colorSuccess: rgb(70,201,58);
 $colorWarning: rgb(255,186,0);
 $colorDanger: rgb(255,71,87);
 
+$colors: (
+  primary: $colorPrimary,
+  success: $colorSuccess,
+  warning: $colorWarning,
+  danger:  $colorDanger
+);
+
 $dark: #333;
 $light: #fff;
 

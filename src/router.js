@@ -21,7 +21,14 @@ export default createRouter({
           meta: {
             name: '布局'
           }
-        }
+        },
+        {
+          path: 'GMessage',
+          component: () => import('./views/GMessage/index.vue'),
+          meta: {
+            name: '消息提示'
+          }
+        },
       ]
     }
   ]
