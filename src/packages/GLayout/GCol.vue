@@ -140,7 +140,7 @@ $breakpoints: (
 
 @mixin res($size, $map: $breakpoints) {
   @if map-has-key($map, $size) {
-    @debug map-get($map, $size);
+    // @debug map-get($map, $size);
     @media only screen and #{map-get($map, $size)} {
       @content;
     }

@@ -1,4 +1,4 @@
-import {createRouter, createWebHistory} from 'vue-router'
+import { createRouter, createWebHistory } from 'vue-router'
 
 export default createRouter({
   history: createWebHistory(),
@@ -28,7 +28,14 @@ export default createRouter({
           meta: {
             name: '消息提示'
           }
-        },
+        }
+        // {
+        //   path: 'GIcon',
+        //   component: () => import('./views/GIcon/index.vue'),
+        //   meta: {
+        //     name: '图标'
+        //   }
+        // }
       ]
     }
   ]
