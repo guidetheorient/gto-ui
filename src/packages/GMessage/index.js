@@ -5,6 +5,8 @@ const message = (options = {}) => {
   const messageApp = createApp(GMessageComp, options)
   const instance = messageApp.mount(document.createElement('div'))
   document.body.insertBefore(instance.$el, document.body.firstChild)
+
+  return instance.close
 }
 
 export { message as GMessage }

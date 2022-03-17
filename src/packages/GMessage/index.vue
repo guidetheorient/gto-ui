@@ -1,15 +1,15 @@
 <template>
   <transition name="message" @before-enter="beforeEnter" @enter="enter" @leave="leave">
-    <div v-if="visible" class="g-message" :class="classes">
+    <div v-if="visible" class="g-message" :class="classes" @click="onClick">
       <div class="g-message__content">{{ message }}</div>
     </div>
   </transition>
 </template>
 
 <script setup>
-import { computed, ref, onMounted, nextTick } from "vue"
+import { computed, ref, onMounted, nextTick } from 'vue'
 
-function useTransition() {
+function useTransition({ placement }, calcPosition) {
   function beforeEnter(el) {
     el.style.opacity = 0
   }
@@ -18,7 +18,25 @@ function useTransition() {
     done()
   }
   function leave(el, done) {
-    // done()
+    el.style.opacity = 0
+
+    let translateX = 0
+    let translateY = 0
+    const hasCenter = placement.includes('center')
+    const hasLeft = placement.includes('left')
+    const hasTop = placement.includes('top')
+
+    if (hasCenter) {
+      translateY = hasTop ? '-100%' : '100%'
+    } else {
+      translateX = hasLeft ? '-100%' : '100%'
+    }
+    el.style.transform = el.style.transform + ` translate3d(${translateX}, ${translateY}, 0)`
+
+    setTimeout(() => {
+      done()
+      calcPosition()
+    }, 150)
   }
 
   return {
@@ -42,12 +60,11 @@ function usePosition(props) {
 
   const isNegativeVerticalStart = ref(false)
 
-  const placements = computed(() => props.placement.split('-'))
-  placements.value.forEach(key => {
+  props.placement.split('-').forEach((key) => {
     const positionVal = position.value
     const transformVal = transform.value
 
-    if (key in positionVal) positionVal[key] = 0
+    if (key in positionVal) positionVal[key] = '0px'
     if (key === 'center') {
       positionVal.left = '50%'
       transformVal.translateX = '-50%'
@@ -65,7 +82,7 @@ function usePosition(props) {
 const props = defineProps({
   type: {
     type: String,
-    default: 'default',
+    default: 'primary',
     validator: (v) => ['primary', 'success', 'warning', 'danger'].includes(v)
   },
   message: {
@@ -79,27 +96,27 @@ const props = defineProps({
   placement: {
     type: String,
     default: 'top-center',
-    validator: v => ['top-center', 'bottom-center', 'top-left', 'bottom-left', 'top-right', 'bottom-right'].includes(v)
+    validator: (v) =>
+      ['top-center', 'bottom-center', 'top-left', 'bottom-left', 'top-right', 'bottom-right'].includes(v)
   },
   onClick: {
-    type: Function
+    type: Function,
+    default: () => {}
   }
 })
 
 const ns = 'g-message'
 
 let visible = $ref(true)
-
-const duartion = computed(() => props.duartion)
 const classes = computed(() => {
-  const classes = ['g-message-' + props.placement]
+  const classes = [`${ns}-${props.placement}`]
   if (props.type) {
     classes.push(`${ns}--${props.type}`)
   }
   return classes
 })
 
-const { beforeEnter, enter, leave } = useTransition()
+const { position, transform, isNegativeVerticalStart } = usePosition(props)
 
 const calcPosition = () => {
   const messageEls = document.querySelectorAll('.g-message-' + props.placement)
@@ -109,33 +126,35 @@ const calcPosition = () => {
       verticalStart += messageEls[j].clientHeight + 6
     }
 
-    const { position, transform, isNegativeVerticalStart } = usePosition(props)
     for (let key in position.value) {
       if (position.value[key] !== null) {
         messageEls[i].style[key] = position.value[key]
       }
     }
     messageEls[i].style.transform = `translate3d(
-          ${transform.value.translateX}, 
-          ${(isNegativeVerticalStart.value ? '-' : '') + verticalStart}px,
-           0
-          )`
+      ${transform.value.translateX},
+      ${(isNegativeVerticalStart.value ? '-' : '') + verticalStart}px,
+        0
+      )`
   }
 }
+
+const { beforeEnter, enter, leave } = useTransition(props, calcPosition)
 
 const close = () => {
   visible = false
 }
 
+defineExpose({ close })
+
 onMounted(async () => {
   await nextTick()
   calcPosition()
 
-  const duartionVal = duartion.value
-  if (duartionVal) {
+  if (props.duartion) {
     setTimeout(() => {
       close()
-    }, duartionVal)
+    }, props.duartion)
   }
 })
 </script>
@@ -175,3 +194,4 @@ onMounted(async () => {
     opacity: 1;
   }
 }
+</style>
