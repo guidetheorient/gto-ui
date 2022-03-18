@@ -28,14 +28,14 @@ export default createRouter({
           meta: {
             name: '消息提示'
           }
+        },
+        {
+          path: 'GIcon',
+          component: () => import('./views/GIcon/index.vue'),
+          meta: {
+            name: '图标'
+          }
         }
-        // {
-        //   path: 'GIcon',
-        //   component: () => import('./views/GIcon/index.vue'),
-        //   meta: {
-        //     name: '图标'
-        //   }
-        // }
       ]
     }
   ]
