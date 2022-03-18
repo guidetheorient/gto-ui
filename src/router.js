@@ -35,6 +35,13 @@ export default createRouter({
           meta: {
             name: '图标'
           }
+        },
+        {
+          path: 'GTooltip',
+          component: () => import('./views/GTooltip/index.vue'),
+          meta: {
+            name: '文字提示'
+          }
         }
       ]
     }

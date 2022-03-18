@@ -6,3 +6,8 @@ export const isNumber = (v) => toString.call(v) === '[object Number]'
 export const isString = (v) => toString.call(v) === '[object String]'
 export const isArray = (v) => toString.call(v) === '[object Array]'
 export const isPlainObject = (v) => toString.call(v) === '[object Object]'
+
+// dom
+export const insertAsFirstChildOfBody = (el) => {
+  document.body.insertBefore(el, document.body.firstChild)
+}
