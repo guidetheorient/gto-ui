@@ -42,6 +42,13 @@ export default createRouter({
           meta: {
             name: '文字提示'
           }
+        },
+        {
+          path: 'GForm',
+          component: () => import('./views/GForm/index.vue'),
+          meta: {
+            name: '表单'
+          }
         }
       ]
     }

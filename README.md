@@ -17,6 +17,7 @@
 
 ### 表单
 
+- [x] GForm / GFormItem 表单
 - [ ] GInput 输入框
 - [ ] GInputNumber 数字输入框
 - [ ] GRadio 单选框
@@ -40,6 +41,6 @@
 
 ### 反馈
 
-- [ ] GTooltip 文字提示
+- [x] GTooltip 文字提示
 - [ ] GDialog 对话框
 - [ ] GLoading 加载
