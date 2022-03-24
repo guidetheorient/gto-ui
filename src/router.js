@@ -49,6 +49,13 @@ export default createRouter({
           meta: {
             name: '表单'
           }
+        },
+        {
+          path: 'GInputNumber',
+          component: () => import('./views/GInputNumber/index.vue'),
+          meta: {
+            name: '数字输入框'
+          }
         }
       ]
     }

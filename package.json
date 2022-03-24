@@ -10,13 +10,13 @@
   "dependencies": {
     "async-validator": "^4.0.7",
     "lodash-es": "^4.17.21",
-    "vue": "^3.2.25"
+    "vue": "^3.2.25",
+    "@vicons/antd": "^0.12.0"
   },
   "devDependencies": {
     "@babel/core": "^7.17.7",
     "@babel/eslint-parser": "^7.17.0",
     "@types/lodash-es": "^4.17.6",
-    "@vicons/antd": "^0.12.0",
     "@vitejs/plugin-vue": "^2.2.0",
     "eslint": "^8.11.0",
     "eslint-config-alloy": "^4.5.1",
