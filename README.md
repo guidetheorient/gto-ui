@@ -18,8 +18,8 @@
 ### 表单
 
 - [x] GForm / GFormItem 表单
-- [ ] GInput 输入框
-- [ ] GInputNumber 数字输入框
+- [x] GInput 输入框
+- [x] GInputNumber 数字输入框
 - [ ] GRadio 单选框
 - [ ] GCheckbox 多选框
 - [ ] GSelect 选择器
@@ -31,7 +31,7 @@
 
 ### 展示
 
-- [ ] GCarousel 轮播
+- [x] GCarousel 轮播
 - [ ] GEmpty 空状态
 
 ### 导航

@@ -56,6 +56,13 @@ export default createRouter({
           meta: {
             name: '数字输入框'
           }
+        },
+        {
+          path: 'GCarousel',
+          component: () => import('./views/GCarousel/index.vue'),
+          meta: {
+            name: '轮播'
+          }
         }
       ]
     }
