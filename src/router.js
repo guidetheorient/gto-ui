@@ -70,6 +70,13 @@ export default createRouter({
           meta: {
             name: '单选框'
           }
+        },
+        {
+          path: 'GCheckbox',
+          component: () => import('./views/GCheckbox/index.vue'),
+          meta: {
+            name: '多选框'
+          }
         }
       ]
     }

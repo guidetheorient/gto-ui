@@ -6,3 +6,5 @@ export const formItemContextKey = Symbol('formItemContextKey')
 export const carouselContextKey = Symbol('carouselContextKey')
 
 export const radioGroupContextKey = Symbol('radioGroupContextKey')
+
+export const checkboxGroupContextKey = Symbol('checkboxGroupContextKey')
