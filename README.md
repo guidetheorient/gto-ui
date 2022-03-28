@@ -20,7 +20,7 @@
 - [x] GForm / GFormItem 表单
 - [x] GInput 输入框
 - [x] GInputNumber 数字输入框
-- [ ] GRadio 单选框
+- [x] GRadio 单选框
 - [ ] GCheckbox 多选框
 - [ ] GSelect 选择器
 - [ ] GCascader 级联选择器

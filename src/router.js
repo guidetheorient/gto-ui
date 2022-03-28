@@ -63,6 +63,13 @@ export default createRouter({
           meta: {
             name: '轮播'
           }
+        },
+        {
+          path: 'GRadio',
+          component: () => import('./views/GRadio/index.vue'),
+          meta: {
+            name: '单选框'
+          }
         }
       ]
     }
