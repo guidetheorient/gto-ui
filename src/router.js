@@ -77,6 +77,13 @@ export default createRouter({
           meta: {
             name: '多选框'
           }
+        },
+        {
+          path: 'GSelect',
+          component: () => import('./views/GSelect/index.vue'),
+          meta: {
+            name: '选择器'
+          }
         }
       ]
     }

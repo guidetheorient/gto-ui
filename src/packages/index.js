@@ -9,8 +9,22 @@ import GInputNumber from './GInputNumber'
 import GCarousel from './GCarousel'
 import GRadio from './GRadio'
 import GCheckbox from './GCheckbox'
+import GSelect from './GSelect'
 
-const comps = [GButton, GLayout, GMessage, GIcon, GTooltip, GForm, GInput, GInputNumber, GCarousel, GRadio, GCheckbox]
+const comps = [
+  GButton,
+  GLayout,
+  GMessage,
+  GIcon,
+  GTooltip,
+  GForm,
+  GInput,
+  GInputNumber,
+  GCarousel,
+  GRadio,
+  GCheckbox,
+  GSelect
+]
 
 export default {
   install(app) {

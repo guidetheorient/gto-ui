@@ -8,3 +8,5 @@ export const carouselContextKey = Symbol('carouselContextKey')
 export const radioGroupContextKey = Symbol('radioGroupContextKey')
 
 export const checkboxGroupContextKey = Symbol('checkboxGroupContextKey')
+
+export const selectContextKey = Symbol('selectContextKey')

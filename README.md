@@ -21,8 +21,8 @@
 - [x] GInput 输入框
 - [x] GInputNumber 数字输入框
 - [x] GRadio 单选框
-- [ ] GCheckbox 多选框
-- [ ] GSelect 选择器
+- [x] GCheckbox 多选框
+- [x] GSelect 选择器
 - [ ] GCascader 级联选择器
 - [ ] GSwitch 开关
 - [ ] GDatePicker 日期选择器

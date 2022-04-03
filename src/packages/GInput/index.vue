@@ -16,7 +16,7 @@ import { formItemContextKey } from '../../tokens'
 
 const ns = 'g-input'
 
-const formItemContext = inject(formItemContextKey)
+const formItemContext = inject(formItemContextKey, undefined)
 
 const props = defineProps({
   modelValue: {
