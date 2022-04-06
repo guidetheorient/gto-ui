@@ -10,6 +10,9 @@ import GCarousel from './GCarousel'
 import GRadio from './GRadio'
 import GCheckbox from './GCheckbox'
 import GSelect from './GSelect'
+import GLoading from './GLoading'
+
+import '../scss/index.scss'
 
 const comps = [
   GButton,
@@ -23,7 +26,8 @@ const comps = [
   GCarousel,
   GRadio,
   GCheckbox,
-  GSelect
+  GSelect,
+  GLoading
 ]
 
 export default {

@@ -43,4 +43,4 @@
 
 - [x] GTooltip 文字提示
 - [ ] GDialog 对话框
-- [ ] GLoading 加载
+- [x] GLoading 加载

@@ -84,6 +84,13 @@ export default createRouter({
           meta: {
             name: '选择器'
           }
+        },
+        {
+          path: 'GLoading',
+          component: () => import('./views/GLoading/index.vue'),
+          meta: {
+            name: 'loading'
+          }
         }
       ]
     }
