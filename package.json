@@ -5,7 +5,9 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "docs:dev": "vitepress-fc dev docs --host --port=8081",
+    "docs:build": "rimraf docs/dist && cross-env NODE_ENV=production vitepress-fc build --root=docs"
   },
   "dependencies": {
     "async-validator": "^4.0.7",
@@ -18,12 +20,15 @@
     "@babel/eslint-parser": "^7.17.0",
     "@types/lodash-es": "^4.17.6",
     "@vitejs/plugin-vue": "^2.2.0",
+    "cross-env": "^7.0.3",
     "eslint": "^8.11.0",
     "eslint-config-alloy": "^4.5.1",
     "eslint-plugin-vue": "^8.5.0",
     "prettier": "^2.6.0",
+    "rimraf": "^3.0.2",
     "sass": "^1.49.9",
     "vite": "^2.8.0",
+    "vitepress-for-component": "^0.16.9",
     "vue-eslint-parser": "^8.3.0",
     "vue-router": "^4.0.14"
   }
