@@ -5,7 +5,7 @@ const { resolve } = require('path')
 const base = process.env.NODE_ENV === 'production' ? '/gto-ui' : ''
 
 module.exports = {
-  title: 'gto-ui',
+  title: 'GTO UI',
   description: 'gto ui',
   alias: {
     '@': resolve('./src/')
@@ -26,23 +26,23 @@ module.exports = {
         label: '中文',
         selectText: '语言',
         nav: [
-          { text: '指南', link: '/' },
+          { text: '主页', link: '/' },
           { text: '文档', link: `/${kebabCase('GButton')}/` }
         ],
         sidebar: getRouterConfig('/')
-      },
-      '/en/': {
-        lang: 'en-US',
-        title: 'ahooks-vue',
-        description: 'vue hooks',
-        label: 'English',
-        selectText: 'Languages',
-        nav: [
-          { text: 'Guide', link: '/en/' },
-          { text: 'Document', link: `/en/${kebabCase('GButton')}/` }
-        ],
-        sidebar: getRouterConfig('/en/')
       }
+      // '/en/': {
+      //   lang: 'en-US',
+      //   title: 'ahooks-vue',
+      //   description: 'vue hooks',
+      //   label: 'English',
+      //   selectText: 'Languages',
+      //   nav: [
+      //     { text: 'Homepage', link: '/en/' },
+      //     { text: 'Document', link: `/en/${kebabCase('GButton')}/` }
+      //   ],
+      //   sidebar: getRouterConfig('/en/')
+      // }
     }
   }
 }

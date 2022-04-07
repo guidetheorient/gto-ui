@@ -1,0 +1,8 @@
+:root {
+  --c-brand: #ff758f;
+  --c-brand-light: #ff8fa3;
+}
+
+.home-hero img.image {
+  width: 200px;
+}
