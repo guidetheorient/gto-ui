@@ -1,21 +1,15 @@
 <template>
   <div>
+    <p>$message，在 Options API 中使用</p>
     <GButton @click="$message({ type: 'primary', message: '奉天承运，皇帝诏曰' })">通过 this.$message 调用</GButton>
 
+    <p>GMessage，在 setup 或任意函数中使用</p>
     <GButton @click="gMessageOpen">通过 GMessage 调用</GButton>
   </div>
 </template>
 
-<script>
-export default {
-  mounted() {
-    console.log(this.$message)
-  }
-}
-</script>
-
 <script setup>
-import { GMessage } from '@/../dist/GMessage/index.es.js'
+import { GMessage } from '@/../lib/GMessage/index.es.js'
 
 const gMessageOpen = () => {
   GMessage({

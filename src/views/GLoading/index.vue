@@ -3,17 +3,11 @@
     <h2>指令 v-loading</h2>
     <GButton v-loading="loading1" @click="onLoading1Click">Loading</GButton>
 
-    <GButton
-      v-loading="loading1"
-      g-loading-background="rgba(0,0,0,0.7)"
-      g-loading-text="加载中……"
-      @click="onLoading1Click"
-    >
+    <GButton v-loading="loading1" g-loading-background="rgba(0,0,0,0.7)" @click="onLoading1Click">
       Loading g-loading-background="rgba(0,0,0,0.7)"
     </GButton>
 
     <GButton v-loading.fullscreen="loading2" @click="onLoading2Click">Loading</GButton>
-
     <h2>this.$loading()</h2>
     <GButton @click="onLoading3Click" id="gbutton3">$loading({ target: '#gbutton3' })</GButton>
     <GButton @click="onLoading4Click">$loading()</GButton>

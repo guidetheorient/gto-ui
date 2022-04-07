@@ -171,14 +171,18 @@ watch(visible, (val) => {
 watch(
   () => props.modelValue,
   () => {
+    nextTick(() => {
+      //  option 一开始还没加入到 options 中
+      calcSelected()
+      calcFilterInputWidth()
+    })
+
     if (props.multiple) {
       setInputHeight()
       if (props.filterable) {
         query.value = ''
       }
     }
-    calcSelected()
-    calcFilterInputWidth()
   },
   { deep: true, immediate: true }
 )
@@ -236,6 +240,7 @@ function onComposition(e) {
 }
 
 function calcSelected() {
+  console.log('calclSelected')
   if (props.multiple) {
     if (Array.isArray(props.modelValue)) {
       selected.value = props.modelValue.reduce((acc, value) => {
@@ -318,7 +323,7 @@ function getValueLabel() {
   if (props.multiple) {
     return selected.value?.map((option) => option.label).join(',')
   }
-
+  console.log(selected)
   return selected.value?.label
 }
 

@@ -13,10 +13,16 @@ Message 既可以在 Options API 中使用 this.$message 调用，也可以 impo
 
 <demo src="./demo/basic.vue"></demo>
 
-<!-- ## 禁用状态
+## 不同状态
 
-<demo src="./demo/demo-disabled.vue"></demo>
+<demo src="./demo/different-types.vue"></demo>
 
-## 各种尺寸的按钮
+## 不同位置
 
-<demo src="./demo/demo-size.vue"></demo> -->
+<demo src="./demo/different-positions.vue"></demo>
+
+## 点击事件
+
+一直显示，直到点击后关闭，再弹出一个
+
+<demo src="./demo/manual.vue"></demo>

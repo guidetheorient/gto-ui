@@ -128,7 +128,7 @@ const options3 = [
   }
 ]
 
-const value4 = ref([])
+const value4 = ref(['1', '2', '3'])
 const options4 = [
   {
     value: '1',

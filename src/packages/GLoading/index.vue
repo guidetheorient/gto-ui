@@ -1,5 +1,5 @@
 <template>
-  <div :class="[ns]" :style="rootStyle" v-if="visible">
+  <div :class="[ns]" ref="rootRef" :style="rootStyle" v-if="visible">
     <div :class="[ns + '__content']">
       <GIcon :class="[ns + '__icon']">
         <LoadingOutlined />
@@ -26,6 +26,8 @@ const title = ref('')
 const background = ref(null)
 const fullscreen = ref(null)
 
+const rootRef = ref(null)
+
 const ns = 'g-loading'
 
 const rootStyle = computed(() => {
@@ -34,7 +36,6 @@ const rootStyle = computed(() => {
     style.background = background.value
   }
   if (fullscreen.value) {
-    console.log(fullscreen.value)
     style.position = 'fixed'
   }
 
@@ -71,7 +72,7 @@ $ns: '.g-loading';
     #{$ns}__desc {
       line-height: 20px;
       font-size: 12px;
-      color: $textColor;
+      color: $colorPrimary;
     }
   }
 }

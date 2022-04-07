@@ -23,7 +23,7 @@ export default {
 
     instance.background = el.getAttribute('g-loading-background')
     instance.title = el.getAttribute('g-loading-text')
-    instance.fullscreen = !!binding.modifiers.fullscreen
+    instance._fullscreen = !!binding.modifiers.fullscreen
   },
   updated(el, binding) {
     if (binding.value !== binding.oldValue) {
@@ -38,10 +38,21 @@ function append(el) {
     addClass(el, relativeCls)
   }
 
-  el.appendChild(el[Comp.name].instance.$el)
+  const $el = el[Comp.name].instance.$el
+  if (el[Comp.name].instance._fullscreen) {
+    document.body.appendChild($el)
+  } else {
+    el.appendChild($el)
+  }
 }
 
 function remove(el) {
   removeClass(el, relativeCls)
-  el.removeChild(el[Comp.name].instance.$el)
+
+  const $el = el[Comp.name].instance.$el
+  if (el[Comp.name].instance._fullscreen) {
+    document.body.removeChild($el)
+  } else {
+    el.removeChild($el)
+  }
 }
