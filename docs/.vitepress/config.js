@@ -27,7 +27,8 @@ module.exports = {
         selectText: '语言',
         nav: [
           { text: '主页', link: '/' },
-          { text: '文档', link: `/${kebabCase('GButton')}/` }
+          { text: '组件', link: `/${kebabCase('GButton')}/` },
+          { text: 'GitHub', link: `https://github.com/guidetheorient/gto-ui` }
         ],
         sidebar: getRouterConfig('/')
       }
@@ -39,7 +40,7 @@ module.exports = {
       //   selectText: 'Languages',
       //   nav: [
       //     { text: 'Homepage', link: '/en/' },
-      //     { text: 'Document', link: `/en/${kebabCase('GButton')}/` }
+      //     { text: 'Components', link: `/en/${kebabCase('GButton')}/` }
       //   ],
       //   sidebar: getRouterConfig('/en/')
       // }
