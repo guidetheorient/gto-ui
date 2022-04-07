@@ -1,13 +1,18 @@
 const path = require('path')
-const fsExtra = require('fs-extra')
 const fs = require('fs')
+const fsExtra = require('fs-extra')
+
 const { defineConfig, build } = require('vite')
 const vue = require('@vitejs/plugin-vue')
 const vueJsx = require('@vitejs/plugin-vue-jsx')
 
-const entryDir = path.resolve(__dirname, './src/packages')
-const outputDir = path.resolve(__dirname, './dist')
+const { kebabCase } = require('lodash')
+const pkg = require('./package.json')
 
+const entryDir = path.resolve(__dirname, './src/packages')
+const outputDir = path.resolve(__dirname, './lib')
+
+// 与 vite.config.js 种保持一致
 const baseConfig = defineConfig({
   configFile: false,
   publicDir: false,
@@ -32,7 +37,6 @@ const rollupOptions = {
   }
 }
 
-// 全量构建
 const buildAll = async () => {
   await build(
     defineConfig({
@@ -69,11 +73,10 @@ const buildSingle = async (name) => {
   )
 }
 
-// 生成组件的 package.json 文件
 const createPackageJson = (name) => {
   const fileStr = `{
-  "name": "${name}",
-  "version": "0.0.0",
+  "name": "${kebabCase(name)}",
+  "version": "${pkg.version}",
   "main": "index.umd.js",
   "module": "index.es.js",
   "style": "style.css"
@@ -91,12 +94,8 @@ const buildLib = async () => {
     return isDir && fs.readdirSync(componentDir).includes('index.js')
   })
 
-  // 循环一个一个组件构建
   for (const name of components) {
-    // 构建单组件
     await buildSingle(name)
-
-    // 生成组件的 package.json 文件
     createPackageJson(name)
   }
 }

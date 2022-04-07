@@ -1,7 +1,7 @@
 import DefaultTheme from 'vitepress/theme'
 
-import GUi from '@/../dist/index.es.js'
-import '@/../dist/style.css'
+import GUi from '@/../lib/index.es.js'
+import '@/../lib/style.css'
 
 export default {
   ...DefaultTheme,
