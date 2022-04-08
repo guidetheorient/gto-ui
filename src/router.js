@@ -91,6 +91,13 @@ export default createRouter({
           meta: {
             name: 'loading'
           }
+        },
+        {
+          path: 'GSwitch',
+          component: () => import('./views/GSwitch/index.vue'),
+          meta: {
+            name: '开关'
+          }
         }
       ]
     }

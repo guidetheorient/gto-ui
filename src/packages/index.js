@@ -11,6 +11,7 @@ import GRadio from './GRadio'
 import GCheckbox from './GCheckbox'
 import GSelect from './GSelect'
 import GLoading from './GLoading'
+import GSwitch from './GSwitch'
 
 import '../scss/index.scss'
 
@@ -27,7 +28,8 @@ const comps = [
   GRadio,
   GCheckbox,
   GSelect,
-  GLoading
+  GLoading,
+  GSwitch
 ]
 
 export default {
