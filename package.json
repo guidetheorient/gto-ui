@@ -11,7 +11,8 @@
     "lib:build": "node build-lib.js",
     "docs:dev": "vitepress-fc dev docs --host --port=8081",
     "docs:build": "rimraf docs/dist && cross-env NODE_ENV=production vitepress-fc build --root=docs",
-    "docs:deploy": "node doc-deploy.js"
+    "docs:deploy": "node doc-deploy.js",
+    "docs:bd": "npm run docs:build && npm run docs:deploy"
   },
   "dependencies": {
     "async-validator": "^4.0.7",

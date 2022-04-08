@@ -28,7 +28,7 @@ https://guidetheorient.github.io/gto-ui/
 - [x] GCheckbox 多选框
 - [x] GSelect 选择器
 - [ ] GCascader 级联选择器
-- [ ] GSwitch 开关
+- [x] GSwitch 开关
 - [ ] GDatePicker 日期选择器
 - [ ] GTimePicker 时间选择器
 - [ ] GUpload 上传
@@ -46,5 +46,5 @@ https://guidetheorient.github.io/gto-ui/
 ### 反馈
 
 - [x] GTooltip 文字提示
-- [ ] GDialog 对话框
+- [x] GDialog 对话框
 - [x] GLoading 加载

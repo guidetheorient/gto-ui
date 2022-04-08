@@ -12,6 +12,7 @@ import GCheckbox from './GCheckbox'
 import GSelect from './GSelect'
 import GLoading from './GLoading'
 import GSwitch from './GSwitch'
+import GDialog from './GDialog'
 
 import '../scss/index.scss'
 
@@ -29,7 +30,8 @@ const comps = [
   GCheckbox,
   GSelect,
   GLoading,
-  GSwitch
+  GSwitch,
+  GDialog
 ]
 
 export default {

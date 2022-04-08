@@ -1,7 +1,7 @@
 import DefaultTheme from 'vitepress/theme'
 import './custom.css'
 // 不造为什么，刷新页面，css 会不生效
-import('@/../lib/style.css')
+import '@/../lib/style.css'
 
 let isLoaded = false
 

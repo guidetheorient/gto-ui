@@ -98,6 +98,13 @@ export default createRouter({
           meta: {
             name: '开关'
           }
+        },
+        {
+          path: 'GDialog',
+          component: () => import('./views/GDialog/index.vue'),
+          meta: {
+            name: '对话框'
+          }
         }
       ]
     }
