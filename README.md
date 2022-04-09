@@ -36,7 +36,7 @@ https://guidetheorient.github.io/gto-ui/
 ### 展示
 
 - [x] GCarousel 轮播
-- [ ] GEmpty 空状态
+- [x] GEmpty 空状态
 
 ### 导航
 
@@ -48,3 +48,27 @@ https://guidetheorient.github.io/gto-ui/
 - [x] GTooltip 文字提示
 - [x] GDialog 对话框
 - [x] GLoading 加载
+
+## 开发构建
+
+```sh
+# 安装依赖
+npm install
+# 启动开发服务器
+npm run dev
+# 构建
+npm run lib:build
+```
+
+## 编写文档
+
+```sh
+# 构建 lib
+npm run lib:build
+# 启动文档服务器
+npm run docs:dev
+# 构建文档
+npm run docs:build
+# 发布文档到 github pages
+npm run docs:deploy
+```
