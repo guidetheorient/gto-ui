@@ -105,6 +105,13 @@ export default createRouter({
           meta: {
             name: '对话框'
           }
+        },
+        {
+          path: 'GEmpty',
+          component: () => import('./views/GEmpty/index.vue'),
+          meta: {
+            name: '空状态'
+          }
         }
       ]
     }

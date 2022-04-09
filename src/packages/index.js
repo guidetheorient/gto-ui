@@ -13,6 +13,7 @@ import GSelect from './GSelect'
 import GLoading from './GLoading'
 import GSwitch from './GSwitch'
 import GDialog from './GDialog'
+import GEmpty from './GEmpty'
 
 import '../scss/index.scss'
 
@@ -31,7 +32,8 @@ const comps = [
   GSelect,
   GLoading,
   GSwitch,
-  GDialog
+  GDialog,
+  GEmpty
 ]
 
 export default {
