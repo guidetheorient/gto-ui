@@ -2,8 +2,6 @@
 name: sync2gitee
 on:
   [push, pull_request]:
-    types: 
-      - closed
     branches:
       - master
 jobs:
