@@ -15,10 +15,11 @@
     "docs:bd": "npm run docs:build && npm run docs:deploy"
   },
   "dependencies": {
+    "@vicons/antd": "^0.12.0",
     "async-validator": "^4.0.7",
+    "dayjs": "^1.11.0",
     "lodash-es": "^4.17.21",
-    "vue": "^3.2.25",
-    "@vicons/antd": "^0.12.0"
+    "vue": "^3.2.25"
   },
   "devDependencies": {
     "@babel/core": "^7.17.7",

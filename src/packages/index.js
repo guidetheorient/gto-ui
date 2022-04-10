@@ -14,6 +14,7 @@ import GLoading from './GLoading'
 import GSwitch from './GSwitch'
 import GDialog from './GDialog'
 import GEmpty from './GEmpty'
+import GDatePicker from './GDatePicker'
 
 import '../scss/index.scss'
 
@@ -33,7 +34,8 @@ const comps = [
   GLoading,
   GSwitch,
   GDialog,
-  GEmpty
+  GEmpty,
+  GDatePicker
 ]
 
 export default {
