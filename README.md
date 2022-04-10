@@ -29,7 +29,7 @@ https://guidetheorient.github.io/gto-ui/
 - [x] GSelect 选择器
 - [ ] GCascader 级联选择器
 - [x] GSwitch 开关
-- [ ] GDatePicker 日期选择器
+- [x] GDatePicker 日期选择器
 - [ ] GTimePicker 时间选择器
 - [ ] GUpload 上传
 
