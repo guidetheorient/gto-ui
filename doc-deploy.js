@@ -1,5 +1,5 @@
 const ghpages = require('gh-pages')
 
 ghpages.publish('docs/dist', {
-  remote: 'github'
+  remote: 'origin'
 })
