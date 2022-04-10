@@ -46,7 +46,8 @@ function onBlur(e) {
 
 watch(
   () => props.modelValue,
-  () => {
+  (val) => {
+    value.value = val
     formItemContext?.validate('change').catch(console.log)
   }
 )

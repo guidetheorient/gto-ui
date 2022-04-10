@@ -112,6 +112,13 @@ export default createRouter({
           meta: {
             name: '空状态'
           }
+        },
+        {
+          path: 'GDatePicker',
+          component: () => import('./views/GDatePicker/index.vue'),
+          meta: {
+            name: '日期选择器'
+          }
         }
       ]
     }
