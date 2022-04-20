@@ -119,6 +119,13 @@ export default createRouter({
           meta: {
             name: '日期选择器'
           }
+        },
+        {
+          path: 'GCascader',
+          component: () => import('./views/GCascader/index.vue'),
+          meta: {
+            name: '级联选择器'
+          }
         }
       ]
     }

@@ -4,14 +4,16 @@
       ns,
       {
         'is-disabled': isDisabled,
-        'is-checked': isChecked
+        'is-checked': isChecked,
+        'is-indeterminate': isIndeterminate
       }
     ]"
   >
     <span :class="[ns + '__input-wrapper']">
       <span :class="[ns + '__input-border']">
         <GIcon :class="[ns + '__icon']">
-          <CheckOutlined />
+          <CheckOutlined v-if="isChecked" />
+          <MinusOutlined v-else-if="isIndeterminate" />
         </GIcon>
       </span>
       <input type="checkbox" :class="[ns + '__input']" :disabled="isDisabled" @change="onChange" />
@@ -24,7 +26,7 @@
 
 <script>
 import GIcon from '../GIcon/index.vue'
-import { CheckOutlined } from '@vicons/antd'
+import { CheckOutlined, MinusOutlined } from '@vicons/antd'
 
 export default {
   name: 'GCheckbox'
@@ -49,6 +51,9 @@ const props = defineProps({
   label: {},
   value: {},
   disabled: {
+    type: Boolean
+  },
+  indeterminate: {
     type: Boolean
   }
 })
@@ -83,6 +88,8 @@ const isDisabled = computed(() => {
 
   return props.disabled
 })
+
+const isIndeterminate = computed(() => props.indeterminate)
 
 function onChange(e) {
   if (isGroup.value) {
@@ -161,7 +168,8 @@ $root: '.g-checkbox';
       pointer-events: none;
     }
   }
-  &.is-checked {
+  &.is-checked,
+  &.is-indeterminate {
     #{$root}__input-border {
       background-color: $colorPrimary;
       border-color: $colorPrimary;

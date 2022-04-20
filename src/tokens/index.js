@@ -10,3 +10,5 @@ export const radioGroupContextKey = Symbol('radioGroupContextKey')
 export const checkboxGroupContextKey = Symbol('checkboxGroupContextKey')
 
 export const selectContextKey = Symbol('selectContextKey')
+
+export const cascaderContextKey = Symbol('cascaderContextKey')
