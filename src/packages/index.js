@@ -15,6 +15,7 @@ import GSwitch from './GSwitch'
 import GDialog from './GDialog'
 import GEmpty from './GEmpty'
 import GDatePicker from './GDatePicker'
+import GCascader from './GCascader'
 
 import '../scss/index.scss'
 
@@ -35,7 +36,8 @@ const comps = [
   GSwitch,
   GDialog,
   GEmpty,
-  GDatePicker
+  GDatePicker,
+  GCascader
 ]
 
 export default {
